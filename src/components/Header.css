@@ -1,0 +1,26 @@
+.header-container {
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center; /* 챗봇 텍스트 중앙 정렬 */
+  align-items: center;
+  background: #ECFBF3;
+  position: relative; /* X 버튼의 절대 위치 설정 */
+}
+
+.header-title {
+  color: black;
+  font-size: 18px;
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 700;
+}
+
+.header-close {
+  position: absolute; /* X 버튼을 오른쪽에 고정 */
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: black;
+  cursor: pointer;
+}

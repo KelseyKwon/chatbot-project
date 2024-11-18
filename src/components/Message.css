@@ -1,0 +1,34 @@
+.message-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.message-container.user {
+  flex-direction: row-reverse;
+}
+
+.message-avatar {
+  width: 25px;
+  height: 30px;
+}
+
+.message-bubble {
+  padding: 10px;
+  border-radius: 20px;
+  background: #005326;
+  color: #EFF6FF;
+  font-size: 15px;
+  font-family: 'Pretendard', sans-serif;
+  max-width: 70%;
+}
+
+.message-container.user .message-bubble {
+  background: #082717;
+}
+
+.message-time {
+  font-size: 12px;
+  font-family: 'Pretendard', sans-serif;
+  color: #ABB4C1;
+}
