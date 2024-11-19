@@ -1,16 +1,37 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import Message from "./Message";
 
 import "./ChatContainer.css";
 
 
-function ChatContainer() {
+function ChatContainer({ messages = [], loadPreviousMessages}) {
+  const containerRef = useRef();
+  const messageEndRef = useRef(); 
+
+  const scrollToBottom = () => {
+    if(messageEndRef.current) {
+      messageEndRef.current.scrollTop = messageEndRef.current.scrollHeight;
+    }
+  }
+  useEffect(() => {
+    messageEndRef.current?.scrollIntoView({ behavior: "smooth" });
+}, [messages]);
+
   return (
-      <div className="chat-container">
-          <Message time="9:00" text="안녕하세요!" isUser={false} />
-          <Message time="9:01" text="안녕하세요! 무엇을 도와드릴까요?" isUser={true} />
-      </div>
-  );
+    <div
+    className="chat-container"
+    ref={containerRef} // 컨테이너 참조
+>
+        {messages.map((message, index) => (
+            <Message
+                key={index}
+                text={message.text}
+                isUser={message.isUser}
+            />
+        ))}
+        <div ref={messageEndRef}></div>
+    </div>
+);
 }
 
 export default ChatContainer;

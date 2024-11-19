@@ -1,37 +1,57 @@
 .footer-container {
-  width: 100%;
-  background: #D6EADF;
-  padding: 20px;
+  width: 95%;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background: #d6eadf; /* Footer 배경색 */
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px; /* 요소 간 간격 */
+  flex-wrap: wrap; /* 필요 시 줄바꿈 */
 }
 
-.footer-input-container {
-  display: flex;
-  width: 100%;
-  max-width: 500px;
-  background: #005326;
-  border-radius: 50px;
-  align-items: center;
+.footer-input-wrapper {
+  flex: 1 1 0;
+  height: 20px;
   padding: 10px 20px;
+  background: #005326; /* 입력창 배경색 */
+  border-radius: 100px; /* 둥근 테두리 */
+  display: flex;
+  justify-content: space-between; /* 입력창과 버튼 분리 */
+  align-items: center;
+  gap: 10px; /* 입력창과 버튼 사이 간격 */
 }
 
 .footer-input {
-  flex: 1;
-  border: none;
-  background: none;
-  color: rgba(147, 167, 156, 0.79);
-  font-size: 16px;
+  flex: 1 1 0;
+  background: none; /* 배경색 제거 */
+  border: none; /* 테두리 제거 */
+  outline: none; /* 포커스 시 테두리 제거 */
+  color: rgba(147, 167, 156, 0.79); /* 텍스트 색상 */
+  font-size: 13px;
   font-family: 'Pretendard', sans-serif;
-  outline: none;
+  font-weight: 400;
+  word-wrap: break-word;
+  white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+  overflow: hidden; /* 텍스트 넘침 방지 */
+  text-overflow: ellipsis; /* 넘치는 텍스트에 '...' 표시 */
+}
+
+.footer-submit-wrapper {
+  padding: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer; /* 클릭 가능 */
 }
 
 .footer-submit {
-  background: none;
-  border: none;
-  color: #EFF6FF;
-  font-size: 15px;
+  color: #eff6ff; /* 버튼 텍스트 색상 */
+  font-size: 13px;
   font-family: 'Pretendard', sans-serif;
-  cursor: pointer;
+  font-weight: 500;
+  word-wrap: break-word;
 }

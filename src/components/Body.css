@@ -1,20 +1,66 @@
 .body-container {
     flex: 1;
     width: 100%;
-    padding: 20px;
+    max-width: 100vw;
+    padding: 5px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
     gap: 20px;
+    scrollbar-width: thin; 
+    scrollbar-color: #888 #f9f9f9;
 }
 
+.body-container::-webkit-scrollbar {
+    width: 8px; /* 스크롤바 너비 */
+}
+
+.body-container::-webkit-scrollbar-thumb {
+    background-color: #888; /* 스크롤바 색상 */
+    border-radius: 4px; /* 스크롤바 둥글게 */
+}
+
+.body-container::-webkit-scrollbar-track {
+    background-color: #f9f9f9; /* 스크롤바 배경 */
+}
+
+.chat-container {
+    width: 100%;
+    flex: 1;
+    overflow-y: auto; /* 스크롤 가능 */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out; /* 부드러운 애니메이션 */
+    animation: fadeIn 0.5s ease; /* 초기 애니메이션 */
+}
+
+.chat-container::-webkit-scrollbar {
+    width: 8px; /* 스크롤바 너비 */
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.chat-container::-webkit-scrollbar-track {
+    background: #f9f9f9; /* 스크롤바 배경 */
+}
 
 .welcome-container {
     width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* 좌측 정렬 */
-    text-align: left; /* 텍스트 좌측 정렬 */
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    text-align: left; 
+    padding-left: 10px;
+    margin-bottom: 0px;
 }
 
 .welcome-image {
@@ -28,6 +74,8 @@
     font-family: 'Pretendard', sans-serif;
     font-weight: 600;
     margin: 10px 0;
+    margin-top: 40px;
+    
 }
 
 .button-container {
@@ -36,16 +84,45 @@
     gap: 10px;
     justify-content: center;
     justify-content: flex-start; /* 버튼들을 왼쪽 정렬 */
+    padding-left: 10px;
 }
 
 .action-button {
     background: #005326;
     color: #EFF6FF;
-    font-size: 15px;
+    font-size: 14px;
     font-family: 'Pretendard', sans-serif;
     font-weight: 400;
     padding: 10px 20px;
     border-radius: 50px;
     border: none;
     cursor: pointer;
+}
+
+/* 메시지 추가 애니메이션 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 메시지 나타나는 효과 */
+.message-container {
+    animation: messageFadeIn 0.5s ease-in-out;
+}
+
+@keyframes messageFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

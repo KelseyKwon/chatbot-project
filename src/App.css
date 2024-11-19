@@ -1,9 +1,13 @@
 .app-container {
-  width: 100%;
-  height: 100%;
+  width: 390px;
+  height: 844px;
+  margin: 0 auto;
   background: linear-gradient(180deg, #ECFBF3 33%, #D6EADF 100%);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  border-radius: 20px; /* 모서리 둥글게 처리 */
+  overflow: hidden; /* 콘텐츠가 넘치지 않도록 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 가벼운 그림자 효과 */
 }

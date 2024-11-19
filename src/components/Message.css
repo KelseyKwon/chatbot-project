@@ -1,7 +1,8 @@
 .message-container {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
+  margin-bottom: 10px;
 }
 
 .message-container.user {
@@ -14,13 +15,16 @@
 }
 
 .message-bubble {
-  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
   border-radius: 20px;
   background: #005326;
   color: #EFF6FF;
-  font-size: 15px;
+  font-size: 14px;
   font-family: 'Pretendard', sans-serif;
-  max-width: 70%;
+  max-width: 80%;
 }
 
 .message-container.user .message-bubble {
@@ -31,4 +35,14 @@
   font-size: 12px;
   font-family: 'Pretendard', sans-serif;
   color: #ABB4C1;
+}
+
+.message-link {
+  color: #1e90ff; /* 링크 색상 */
+  text-decoration: underline; /* 밑줄 */
+  cursor: pointer; /* 클릭 가능한 커서 */
+}
+
+.message-link:hover {
+  color: #0056b3; /* 호버 시 색상 */
 }
