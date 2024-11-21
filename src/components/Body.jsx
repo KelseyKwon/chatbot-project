@@ -12,11 +12,11 @@ function Body() {
     };
 
     const questionsAndAnswers = [
-        { question: "응원단 소개", answer: "건국의 함성을 외치다" },
+        { question: "응원단 소개", answer: "<모든 건국인들의 청춘과 열정을 수호하는 건국대학교 공식 응원단 악스케이(OX-K)입니다> \n 55년의 전통을 가진 건국대의 응원단으로, 대동제와 신입생을 위한 예비대학을 등 학교 내의 여러 행사에 참가해 공연을 펼치고 있습니다. " },
         { question: "위치", answer: "건국대 학생회관에 위치하고 있습니다. https://maps.app.goo.gl/BS9WuvRoANdurfcx8" },
         { question: "일정 및 행사", answer: "앞으로 예정된 행사는 없습니다." },
-        { question: "입단 문의", answer: "010-9424-2081로 문자주세요" },
-        { question: "후원 문의", answer: "010-9424-2081로 문자" },
+        { question: "입단 문의", answer: "인스타그램 @konkuk.oxk에 방문해주세요 ! " },
+        { question: "후원 문의", answer: "인스타그램 @konkuk.oxk에 방문해주세요 ! " },
         { question: "무대 소개 영상", answer: "https://youtu.be/K-KnMZ7FiEY?si=wt5XH3JXfm-7nV02" },
     ];
 
