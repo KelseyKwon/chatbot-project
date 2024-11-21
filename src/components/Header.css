@@ -15,12 +15,36 @@
   font-weight: 700;
 }
 
-.header-close {
-  position: absolute; 
-  right: 20px;
-  background: none;
-  border: none;
-  font-size: 20px;
-  color: black;
-  cursor: pointer;
+.header-close-container {
+  position: absolute;
+  right: 32px;
+  display: inline-flex; /* Flexbox 정렬 */
+  justify-content: flex-start;
+  align-items: center;
+  padding: 4px 5px; /* 내부 여백 */
+  background: #005326; /* 배경색 */
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25); /* 외부 그림자 */
+  border-radius: 100px; /* 둥근 모서리 */
+  gap: 10px; /* 간격 */
+  cursor: pointer; /* 클릭 가능한 커서 */
+  animation: float 3s ease-in-out infinite;
 }
+
+.header-close-image {
+  width: 16px; 
+  height: 18.43px; 
+  box-shadow: 0px 5px 4px rgba(255, 255, 255, 0.20); 
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
